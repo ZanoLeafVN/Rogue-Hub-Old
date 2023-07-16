@@ -21,7 +21,7 @@ if makefolder and isfolder and not isfolder("Rogue Hub") then
 end
 
 if not isfile("/Rogue Hub/Configs/Quotes.ROGUEHUB") then 
-    writefile("/Rogue Hub/Configs/Quotes.ROGUEHUB", req({ Url = "https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Extra/Quotes.ROGUEHUB" }).Body);
+    writefile("/Rogue Hub/Configs/Quotes.ROGUEHUB", req({ Url = "https://raw.githubusercontent.com/ZanoLeafVN/Rogue-Hub-Old/main/Extra/Quotes.ROGUEHUB" }).Body);
 end
 
 if not isfile("/Rogue Hub/Configs/Keybind.ROGUEHUB") then
@@ -31,7 +31,7 @@ if not isfile("/Rogue Hub/Configs/Keybind.ROGUEHUB") then
 end
 
 local response = req({
-    Url = "https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Games/" .. game.PlaceId .. ".lua",
+    Url = "https://raw.githubusercontent.com/ZanoLeafVN/Rogue-Hub-Old/main/Games/" .. game.PlaceId .. ".lua",
     Method = "GET"
 })
 
@@ -48,7 +48,7 @@ if response.StatusCode ~= 404 then
     local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
 
     if teleportFunc and game.PlaceId ~= 6403373529 then
-        teleportFunc([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Main.lua", true))()]])
+        teleportFunc([[loadstring(game:HttpGet("https://raw.githubusercontent.com/ZanoLeafVN/Rogue-Hub-Old/main/Main.lua", true))()]])
     end
 
     -- If its not 404 why make another HTTP request?
